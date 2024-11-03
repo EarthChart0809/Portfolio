@@ -12,6 +12,7 @@ body {
   font-style: normal;
   line-height: 1.6;
   scroll-behavior: smooth; /* スムーズスクロールを適用 */
+  background: linear-gradient(135deg, #f0f4ff, #ffffff);
 }
 
 #hero-header {
@@ -38,7 +39,7 @@ body {
   align-items: center; /* 中央寄せ */
   color: #ddd;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
-  font-size:75px /*文字の大きさ調整*/
+  font-size:65px /*文字の大きさ調整*/
 }
 
 .careerfunction{
@@ -52,10 +53,6 @@ body {
   border-radius: 50px;
   display: block;
   gap: 5px; /* 必要に応じて調整 */
-}
-
-.circle svg {
-  margin-right: -30px; /* 間隔を狭めるために負の値を指定 */
 }
 
 .rectangle {
@@ -166,24 +163,46 @@ h2 {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  background: linear-gradient(135deg, #f0f4ff, #cfe0fc);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill-item img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+  width: 75px;
+  height: 75px;
+  margin-right: 25px;
   border-radius: 10px;
+}
+
+.skill-item img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
 .skill-text {
   max-width: 600px;
 }
 
+.skill-img{
+  display: flex;
+  gap:20;
+}
+
 .stars {
   display: inline-block;
-  font-size: 24px;
+  font-size: 16px;
   color: #FFD700; /* 金色 */
 }
+
+.stars:hover {
+  color: gold;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
 
 .star {
   padding: 0 2px;
