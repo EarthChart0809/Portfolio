@@ -201,6 +201,8 @@ h2 {
   gap:150px;
 }
 
+
+
 .stars {
   display: inline-block;
   font-size: 16px;
@@ -255,6 +257,13 @@ details summary {
 #works {
   background: inherit;
   padding: 40px;
+}
+
+#works img {
+  width: 100%; /* 画像を親要素の幅に合わせる */
+  height: auto; /* 高さは自動調整 */
+  max-width: 500px; /* 最大幅を400pxに制限 */
+  margin-bottom: 10px; /* 画像とテキストの間にスペースを追加 */
 }
 
 details {
