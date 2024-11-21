@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="html,css,js,web">
     <meta name="format-detection" content="telephone=no,email=no,address=no">
-    <title>ポートフォリオ</title>
+    <title>Portfolio</title>
+    <link rel="icon" href="kame .png">
+    <link rel="apple-touch-icon" href="kame .png">
     <link rel="stylesheet" href="main.css">
     <script>
         (function(d) {
@@ -43,10 +45,16 @@
     <section id="about">
         <h2>ABOUT</h2>
             <div class="about-item">
-                <img src="梅の花.jpg" alt="Skill Icon">
+                <img src="kame .png" alt="Skill Icon">
                 <div class="skill-text">
-                    <h3>かめ</h3>
-                    <p>ポートフォリオをご覧くださりありがとうございます。</p>
+                    <div class="jikosyoukai">
+                    <h3>自己紹介</h3>
+                    <p>Name:亀井 良 / Kamei Ryo <br></p>
+                    <p>Birthday:2007/8/9<br></p>
+                    <p>Hobby:家庭菜園<br></p>
+                    <p>Profession:大阪公立大学工業高等専門学校 知能情報コース 2年<br></p>
+                    </div>
+                    <p>ポートフォリオをご覧くださりありがとうございます。<br></p>
                     <p>情報系高専生のかめです。</p>
                     <p>部活は福祉科学研究会に所属しており、主にカメラ映像の処理を担当しています。
                         趣味は家庭菜園です。</p>
@@ -100,8 +108,9 @@
                     <span class="star">&#9734;</span>
                     <span class="star">&#9734;</span>
                 </div>
-                <p>学校と部活の両方で使用しています。OpenCVを用いたカメラ映像の処理を頑張っています。</p>
-                <p>rasberrypiを扱うのに使用しています。</p>
+                <p>学校の授業や部活動の両方でさまざまなプロジェクトに取り組んでいます。</p>
+                <p>その中でも、特にOpenCVを用いてカメラ映像の処理に力を入れており、画像処理技術の習得に努めています。</p>
+                <p>rasberrypi の映像処理に使用しています。</p>
             </div>
         </div>
     
@@ -118,7 +127,7 @@
                     <span class="star">&#9734;</span>
                 </div>
                 <p>学校の授業で使用しています。</p>
-                <p>esp32を扱うのに使用しています。</p>
+                <p>Arduinoやesp32を扱うのに使用しています。</p>
             </div>
         </div>
         
@@ -151,7 +160,8 @@
                     <span class="star">&#9734;</span>
                 </div>
                 <p>学校の授業で使用しています。</p>
-            </div>
+                <p>Githubのリモートリポジトリの作成に使用しています。</p>
+                        </div>
         </div>
 
         <div class="skill-img3">
@@ -172,6 +182,8 @@
 
 
         </div>
+        </div>
+        </div>
             
     </section>
     
@@ -191,7 +203,11 @@
         <p>制作物やプロジェクトを紹介します。</p>
         <div class="works">
         <div class="works-programming">
-            <img src="tetorisu.png"art="課題4">
+            <div class="hover-container">
+            <a href="https://github.com/EarthChart0809/Programming-subject-4"><img src="tetorisu.png"art="課題4"></a>
+        
+            <img src="かめテトリス.png" alt="アニメーション" class="hover-apng">
+            </div>
             <p>プログラミング1  課題4</p>
             <details>
                 <summary>作品紹介</summary>
@@ -208,8 +224,8 @@
         </div>
 
         <div class="works-text">
-            <img src="hackU.png" alt="高専祭">
-            <p>高専生向けプレゼンテーションツールの作成</p>
+            <a href="https://github.com/xRon0s/my_project"><img src="hackU.png" alt="高専祭"></a>
+            <p>高専生向けプレゼンテーションツール</p>
             <details>
                 <summary>作品詳細</summary>
                 高専生が使用することを想定した<br>
@@ -224,7 +240,7 @@
 
         <div class="works-portfolio">
             <img src="icon_html-css.png"alt="ポートフォリオ">
-            <p>自己紹介のポートフォリオの作成</p>
+            <p>自己紹介のポートフォリオ</p>
             <details>
                 <summary>作品詳細</summary>
                 自己紹介のポートフォリオを作成しました。<br>
