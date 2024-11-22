@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
       container.appendChild(petal);
   
       // 一定時間後に花びらを削除
-      setTimeout(() => petal.remove(), 3500);
+      setTimeout(() => petal.remove(), 2750);
     }
   
     // 一定間隔で花びらを生成
