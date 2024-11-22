@@ -47,25 +47,77 @@ body {
   
 }
 
+/* タイムライン全体のスタイル */
+.career-container {
+  position: relative;
+  padding-left: 80px; /* 左にスペースを確保 */
+  margin-top: 10px;
+}
+
+/* 縦線のスタイル */
+.timeline-line {
+  position: absolute;
+  left: 15px; /* 縦線の位置を調整 */
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: green;
+  z-index: 0;
+}
+
+/* タイムライン項目 */
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  gap: 20px; /* 丸と内容の間に余白 */
+}
+
+/* 丸のスタイル */
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: green;
+  border-radius: 50%;
+  margin-left: -70px; /* 左にずらす */
+  z-index: 1;
+}
+
+/* タイムラインの内容 */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* 日付と経歴の間に余白 */
+}
+
+/* 日付 */
+.year {
+  font-weight: bold;
+  color: #444;
+  flex-shrink: 0; /* 固定幅で左寄せ */
+  min-width: 80px; /* 日付部分の最小幅 */
+}
+
+/* 経歴 */
+.event {
+  color: #666;
+  line-height: 1.5; /* 読みやすくする */
+}
+
+
 .careerfunction{
   display:flex;
   gap:20px;
 }
 
-.circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  display: block;
-  gap: 5px; /* 必要に応じて調整 */
-}
+
 
 .rectangle {
   width: 25px;
   height: 75px;
   background: rgb(21, 255, 0);
 }
-
 
 /* ヘッダーのスタイル */
 header {
@@ -79,7 +131,6 @@ header {
   background-size: cover; /* 画像を全体にフィット */
   /*background-position: center; /* 中央に配置 */
 }
-
 
 /* ヘッダーのナビゲーションを上部に固定 */
 header nav {
@@ -198,15 +249,13 @@ h2 {
 
 .skill-img2{
   display:flex;
-  gap:80px;
+  gap: 72px;;
 }
 
 .skill-img3{
   display:flex;
   gap:150px;
 }
-
-
 
 .stars {
   display: inline-block;
@@ -278,9 +327,6 @@ details {
 .hover-container {
   position: relative;
   display: inline-block;
-  width: 150px; /* ホバー可能な範囲の幅を設定 */
-  height: 150px; /* ホバー可能な範囲の高さを設定 */
-  overflow: hidden; /* 子要素が範囲を超えた場合に隠す */
 }
 
 /* メイン画像の設定 */
@@ -300,7 +346,7 @@ details {
   width: 150px; /* 必要に応じて調整 */
   opacity: 0; /* 初期状態では非表示 */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  border: 3px solid #4caf50; /* 緑の枠線 */
+  border: 3px solid #4cb1dd; /* 緑の枠線 */
     border-radius: 8px; /* 角丸を追加 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
     background-color: #ffffff; /* 背景を白に設定（必要なら） */
@@ -310,7 +356,7 @@ details {
 /* ホバー時のAPNG表示 */
 .hover-container:hover .hover-apng {
   opacity: 1;
-  transform: translateX(10px); /* 少し横にスライド */
+   transform: translateX(10px); /* 少し横にスライド */
 }
 
 /* フッターのスタイル */
@@ -326,4 +372,35 @@ footer {
 header nav a:hover {
   transform: scale(1.3); /* 拡大率 */
 }
+
+.falling-petals-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0.5;
+  }
+}
+
 

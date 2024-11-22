@@ -10,6 +10,7 @@
     <link rel="icon" href="kame .png">
     <link rel="apple-touch-icon" href="kame .png">
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="animation.js"></script>
     <script>
         (function(d) {
             var config = {
@@ -37,8 +38,8 @@
         </nav>
     </header>
 
-    
     <h1 class="upheader"><strong>EarthChart's Portfolio</strong></h1>
+    
             
 
     <!-- 各セクション -->
@@ -66,33 +67,52 @@
     <section id="career">
         <h2>CAREER</h2>
         <p>これまでの経歴や学歴を記載します。</p>
-
-        <div class="careerfunction">
-            <div class="circle">
-                <svg width="100" height="100">
-                    <circle cx="15" cy="15" r="15" fill="green" />
-                </svg>
-                <svg width="100" height="100">
-                    <circle cx="15" cy="15" r="15" fill="green" />
-                </svg>
+    
+        <div class="career-container">
+            <!-- 縦線を親要素として配置 -->
+            <div class="timeline-line"></div>
+    
+            <!-- タイムラインの内容 -->
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2023/4</p>
+                    <p class="event">大阪公立大学工業高等専門学校 総合システム科に入学</p>
+                </div>
             </div>
-            <div class="careeryear">
-                <p>2023/4</p>
-                <p>2023/5</p>
-                <p>2023/8</p>
-                <p>2024/4</p>
-                <p>2024/6</p>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2023/5</p>
+                    <p class="event">福祉科学研究会(Fukaken)に入部</p>
+                </div>
             </div>
-
-            <div class="careername">
-                <p>大阪公立大学工業高等専門学校 総合システム科に入学</p>
-                <p>福祉科学研究会(Fukaken)に入部</p>
-                <p>第8回水中ロボットフェスティバル ジュニア部門に参加</p>
-                <p>大阪公立大学工業高等専門学校 知能情報コースに進学</p>
-                <p>レスキューロボットコンテスト 2024 の予選に参加</p>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2023/8</p>
+                    <p class="event">第8回水中ロボットフェスティバル ジュニア部門に参加</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2024/4</p>
+                    <p class="event">大阪公立大学工業高等専門学校 知能情報コースに進学</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2024/6</p>
+                    <p class="event">レスキューロボットコンテスト 2024 の予選に参加</p>
+                </div>
             </div>
         </div>
     </section>
+    
+    
+    
 
     <section id="skills">
         <h2>SKILLS</h2>
