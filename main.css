@@ -135,7 +135,7 @@ header nav {
   top: 0;
   width: 100%;
   background-color:#333;
-  z-index: 2;
+  z-index: 4;
 }
 
 .about-item {
@@ -271,6 +271,13 @@ h2 {
   padding: 0 2px;
 }
 
+#works h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left; /* 左揃え */
+  
+}
+
 .works{
   gap: 40px;
   align-items: flex-start;
@@ -404,4 +411,71 @@ header nav a:hover {
   }
 }
 
+/* Contactセクションのスタイル */
+#contact {
+  text-align: center;
+  margin-top: 40px;
+}
 
+#contact h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left; /* 左揃え */
+  
+}
+
+/* Flexboxコンテナ */
+.contact-container {
+  display: flex;
+  justify-content: center; /* 中央揃え */
+  gap: 40px; /* 要素間のスペース */
+  align-items: center; /* 垂直方向で中央揃え */
+  margin-top: 20px;
+}
+
+/* 個々のアイテム */
+.contact-item {
+  display: flex;
+  flex-direction: column; /* アイコンとテキストを縦並び */
+  align-items: center; /* テキストをアイコン中央に揃える */
+  font-size: 16px;
+  color: #333;
+}
+
+/* アイコンの基本スタイル */
+.contact-icon {
+  width: 50px; /* アイコンの幅 */
+  height: 50px; /* アイコンの高さ */
+  transition: transform 0.3s ease, filter 0.3s ease; /* アニメーション */
+}
+
+/* ホバー時のアニメーション */
+.contact-icon:hover {
+  transform: scale(1.2); /* 1.2倍に拡大 */
+  filter: brightness(1.2); /* 明るさを少し上げる */
+  cursor: pointer; /* カーソルを指アイコンに変更 */
+}
+
+/* トップへ戻るボタンのコンテナ */
+.back-to-top-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* フッターとの間隔を調整 */
+}
+
+/* トップへ戻るボタンのスタイル */
+#back-to-top {
+  background-color: #163717; /* ボタンの背景色 */
+  color: white; /* 文字色 */
+  padding: 10px 15px; /* ボタンの余白 */
+  border-radius: 50px; /* 丸みを追加 */
+  text-decoration: none; /* 下線を削除 */
+  font-size: 14px; /* フォントサイズ */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 影を追加 */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* アニメーション */
+}
+
+#back-to-top:hover {
+  background-color: #28612b; /* ホバー時の背景色変更 */
+  transform: translateY(-6px); /* 少し浮き上がる */
+}
