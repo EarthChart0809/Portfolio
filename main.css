@@ -39,7 +39,18 @@ body {
   align-items: center; /* 中央寄せ */
   color: #ddd;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影を付ける */
-  font-size:65px /*文字の大きさ調整*/
+  font-size:65px; /*文字の大きさ調整*/
+  padding:0 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border:2px solid #747474;
+  /*-ms-filter: sepia(60%);
+  filter: sepia(60%);*/
+  -ms-filter: saturate(200%);
+  filter: saturate(200%);
+  -ms-filter: contrast(120%);
+  filter: contrast(120%);
+  /*-ms-filter: brightness(110%);
+  filter: brightness(110%);*/
 }
 
 .jikosyoukai{
