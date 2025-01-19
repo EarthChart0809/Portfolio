@@ -292,12 +292,15 @@ h2 {
 .works{
   gap: 40px;
   align-items: flex-start;
-  display:flex;
   max-width: 1275px; /* 必要に応じて幅を調整 */
-  
+
 }
 
-.works-programming, .works-text ,.works-portfolio {
+.works-flex{
+  display:flex;
+}
+
+.works-programming, .works-text ,.works-portfolio,.works-loadrunner {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   padding: 10px;
