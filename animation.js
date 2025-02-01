@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // 花びらの画像リスト
     const petalImages = [
-      'petals-a.png', // 花びら1
-      'petals-b.png', // 花びら2
-      'petals-c.png', // 花びら3
+      './image/petals-a.png', // 花びら1
+      './image/petals-b.png', // 花びら2
+      './image/petals-c.png', // 花びら3
     
     ];
   

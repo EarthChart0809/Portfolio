@@ -29,7 +29,7 @@ body {
 }
 
 .upheader {
-  background-image: url("白い梅.jpeg");
+  background-image: url("./image/白い梅.jpeg");
   background-position: center;
   background-size: cover; /* 画像を全体にフィット */
   height: 500px; /* 高さを指定 */
