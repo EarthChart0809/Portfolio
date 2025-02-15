@@ -349,14 +349,17 @@ details summary {
 }
 
 .image-container {
-  width: 45%; /* 画像の幅を調整 */
-  margin-bottom: 10px;
+  width: 33.5%; /* 画像の幅を調整 */
+  margin-bottom: 0px;
   text-align: center;
 }
 
 .image-container img {
   width: 100%;
   height: auto;
+  max-width: 200px; /* 最大幅を設定 */
+  max-height: 200px; /* 最大高さを設定 */
+  object-fit: cover; /* アスペクト比を保ちながら中央を表示 */
 }
 
 details {
@@ -366,6 +369,7 @@ details {
 .hover-container {
   position: relative;
   display: inline-block;
+  width: 100%; /* 親要素の幅に合わせる */
 }
 
 /* メイン画像の設定 */
@@ -392,10 +396,33 @@ details {
     padding: 10px; /* コンテンツの余白 */
 }
 
+.hover-apng2 {
+  position: absolute;
+  top: 0;
+  width: 300px; /* 表示サイズを調整 */
+  height: auto; /* 高さは画像比率に基づく */
+  opacity: 0; /* 初期状態は非表示 */
+  left: -110%; /* メイン画像の右側に表示 */
+  width: 150px; /* 必要に応じて調整 */
+  opacity: 0; /* 初期状態では非表示 */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border: 3px solid rgba(74, 4, 11);; /* 緑の枠線 */
+    border-radius: 8px; /* 角丸を追加 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
+    background-color: #ffffff; /* 背景を白に設定（必要なら） */
+    padding: 10px; /* コンテンツの余白 */
+}
+
 /* ホバー時のAPNG表示 */
 .hover-container:hover > .hover-apng {
   opacity: 1;
   transform: translateX(10px); /* 少し横にスライド */
+}
+
+/* ホバー時のAPNG表示 */
+.hover-container:hover > .hover-apng2 {
+  opacity: 1;
+  transform: translateX(-10px); /* 少し横にスライド */
 }
 
 /* フッターのスタイル */
