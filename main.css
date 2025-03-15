@@ -76,6 +76,16 @@ body {
   .hover-apng, .hover-apng2 {
     width: 100px; /* 表示サイズを調整 */
   }
+
+  .works-flex {
+    flex-direction: column; /* 縦並びに変更 */
+    align-items: center; /* 中央揃え */
+  }
+
+  .works-programming, .works-text, .works-portfolio, .works-loadrunner, .works-dot {
+    width: 100%; /* 幅を100%に設定 */
+    margin-bottom: 30px; /* 下に余白を追加 */
+  }
 }
 
 /* メディアクエリ: 480px以下の画面サイズ（スマホ） */
@@ -100,6 +110,16 @@ body {
   .works img {
     max-width: 100%; /* 画像の最大幅を100%に設定 */
     height: auto; /* 高さを自動調整 */
+  }
+
+  .works-flex {
+    flex-direction: column; /* 縦並びに変更 */
+    align-items: center; /* 中央揃え */
+  }
+
+  .works-programming, .works-text, .works-portfolio, .works-loadrunner, .works-dot {
+    width: 100%; /* 幅を100%に設定 */
+    margin-bottom: 20px; /* 下に余白を追加 */
   }
 }
 
