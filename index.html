@@ -10,12 +10,14 @@
     <link rel="icon" href="./image/kame .png">
     <link rel="apple-touch-icon" href="./image/icon-ume_suibokuga.png">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
 
     
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <script type="text/javascript" src="animation.js"></script>
+    <script type="text/javascript" src="page_switching.js"></script>
     <script>
         (function(d) {
             var config = {
@@ -73,7 +75,7 @@
     <section id="career">
         <h2>CAREER</h2>
         <p>これまでの経歴や学歴を記載します。</p>
-    
+        <div class="career-container-flex">
         <div class="career-container">
             <!-- 縦線を親要素として配置 -->
             <div class="timeline-line"></div>
@@ -136,6 +138,35 @@
                 </div>
             </div>
         </div>
+        <div class="career-container">
+            <!-- 縦線を親要素として配置 -->
+            <div class="timeline-line"></div>
+    
+            <!-- タイムラインの内容 -->
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2025/4</p>
+                    <p class="event">大阪公立大学工業高等専門学校 3年生に進級</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2025/6</p>
+                    <p class="event">レスキューロボットコンテスト 2025 の予選に参加</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="circle"></div>
+                <div class="content">
+                    <p class="year">2025/8</p>
+                    <p class="event">Robotics Open eXchange 2025 に参加</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
     </section>
     
     <section id="skills">
@@ -248,6 +279,21 @@
     <section id="works">
         <h2>WORKS</h2>
         <p>制作物やプロジェクトを紹介します。</p>
+        <!-- ページインジケーター -->
+    <div class="page-indicator">
+        <span class="page-dot active" data-page="0"></span>
+        <span class="page-dot" data-page="1"></span>
+    </div>
+    
+    <!-- ページナビゲーション -->
+    <div class="page-navigation">
+        <button class="page-title active" data-page="0">学校の製作物</button>
+        <button class="page-title" data-page="1">部活の製作物</button>
+    </div>
+    
+    <div class="works-container">
+        <!-- 学校の製作物ページ -->
+        <div class="works-page active" id="works-page-0">
         <div class="works">
         <div class="works-flex">
         <div class="works-programming">
@@ -372,6 +418,75 @@
                     </div>
                 </details> -->
             </details>
+            </div>
+        </div>
+        </div>
+        </div>
+
+                <!-- 部活の製作物ページ -->
+        <div class="works-page" id="works-page-1">
+            <div class="works">
+                <div class="works-flex">
+                    <div class="works-text">
+                        <a href="https://github.com/EarthChart0809/QRcode"><img src="./image/No_Image.png" alt="高専祭"></a>
+                        <p>ラズパイを用いたカメラ映像の送信</p>
+                        <p><i class="fa-solid fa-wrench"></i> 製作日 :2024年 6月～ 2024年 7月 <br>
+                            <i class="fa-regular fa-hourglass"></i>  製作時間 : 40時間</p>
+                        <details>
+                            <summary>作品紹介</summary>
+                            ラズパイ側でカメラ映像をキャプチャして、<br>
+                            ネットワーク経由でPCに送信し、pcで映像を表示させるサーバープログラムです。<br>
+                            ソケット通信を利用しており、<br>
+                            2台のカメラを同時処理できます。<br>
+                        </details>
+                    </div>
+                    <div class="works-text">
+                         <a href="https://github.com/EarthChart0809/QRcode"><img src="./image/NO_Image.png" alt="高専祭"></a>
+                        <p>ラズパイを用いたカメラ映像の送信 + qrcode読み取り</p>
+                        <p><i class="fa-solid fa-wrench"></i> 製作日 :2024年 7月～ 2024年 8月 <br>
+                            <i class="fa-regular fa-hourglass"></i>  製作時間 : 10時間</p>
+                        <details>
+                            <summary>作品紹介</summary>
+                            ラズパイ側でカメラ映像をキャプチャして、<br>
+                            ネットワーク経由でPCに送信し、pcで映像を表示させるサーバープログラムです。<br>
+                            上記のプログラムにQRcodeを読み取る機能を追加しました。<br>
+                        </details>
+                    </div>
+                    </div>
+                    <div class="works-flex">
+                    <div class="works-text">
+                        <a href="https://github.com/xRon0s/my_project"><img src="./image/airship.jpg" alt="高専祭"></a>
+                        <p>Fusion360・Autodesk を用いた飛行船</p>
+                        <p><i class="fa-solid fa-wrench"></i> 製作日 :2024年 8月～ 2024年 11月 <br>
+                            <i class="fa-regular fa-hourglass"></i>  製作時間 : 50時間</p>
+                        <details>
+                            <summary>作品紹介</summary>
+                            Fusion360・Autodesk を用いて、飛行船の3Dモデルを作成しました。<br>
+                            モデルは飛行船の模型のデザインを参考にしており、<br>
+                            機体の構造の骨組みを再現しました。<br>
+                            作成した3DデータをAutodeskで2Dデータに変換し、<br>
+                            レーザーカッターで印刷して模型を組み立てました。<br>
+                            印刷に使用した素材は「mdf」です。<br>
+                            印刷に4時間程度かかりました。
+                        </details>
+                    </div>
+                    <div class="works-text">
+                        <a href="https://github.com/EarthChart0809/Camera---Controller"><img src="./image/No_Image.png" alt="高専祭"></a>
+                        <p>ラズパイを用いたカメラ映像の送信 + コントローラー入力</p>
+                        <p><i class="fa-solid fa-wrench"></i> 製作日 :2025年 1月～ 2025年 5月 <br>
+                            <i class="fa-regular fa-hourglass"></i>  製作時間 : 70時間</p>
+                        <details>
+                            <summary>作品紹介</summary>
+                            ラズパイ側でカメラ映像をキャプチャして、<br>
+                            ネットワーク経由でPCに送信し、pcで映像を表示させるサーバープログラムです。<br>
+                            ソケット通信を利用しており、<br>
+                            2台のカメラを同時処理できます。<br>
+                            上記のプログラムにラズパイへのコントローラー入力送信機能を追加し、<br>
+                            機体の遠隔操作ができるようにしました。<br>
+                        </details>
+                    </div>
+                    </div>
+                
 
         </div>
         </div>
