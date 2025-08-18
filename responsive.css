@@ -13,6 +13,51 @@
     width: 45%; /* 画像の幅を調整 */
   }
 
+  .skill-item {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto 22px auto;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .skill-item img {
+    width: 70px;
+    height: 70px;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  .skill-text h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .skill-text p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .stars {
+    font-size: 20px;
+    margin: 12px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #skills {
+    padding: 40px 20px;
+  }
+
+  #skills h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
   .hover-apng, .hover-apng2 {
     width: 100px; /* 表示サイズを調整 */
   }
@@ -53,6 +98,72 @@
 
   .image-container {
     width: 100%; /* 画像の幅を調整 */
+  }
+
+  .skill-item {
+    flex-direction: column;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #f8f9ff, #e8f0ff); /* より薄いグラデーション */
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .skill-item img:hover {
+    transform: scale(1.05); /* ホバー効果を控えめに */
+  }
+
+  .skill-text {
+    width: 100%;
+  }
+
+  .skill-text h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .skill-text p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+    margin: 0;
+  }
+
+  .stars {
+    font-size: 18px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .star {
+    padding: 0 1px; /* 星の間隔を狭く */
+  }
+
+  #skills {
+    padding: 30px 15px;
+  }
+
+  #skills h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  #skills p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
   }
 
   .hover-apng, .hover-apng2 {
