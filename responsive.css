@@ -13,6 +13,17 @@
     width: 45%; /* 画像の幅を調整 */
   }
 
+  .award-item {
+    margin-top: 16px;
+    text-align: center;
+  }
+
+  .award-item img {
+    width: 85%;      /* 画像をより大きく表示 */
+    max-width: 320px;/* 最大幅を制限 */
+    border-radius: 10px;
+  }
+
   .skill-item {
     flex-direction: column;
     text-align: center;
@@ -98,6 +109,17 @@
 
   .image-container {
     width: 100%; /* 画像の幅を調整 */
+  }
+
+  .award-item {
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .award-item img {
+    width: 98%;      /* ほぼ全幅表示 */
+    max-width: 220px;/* 最大幅をさらに制限 */
+    border-radius: 12px;
   }
 
   .skill-item {

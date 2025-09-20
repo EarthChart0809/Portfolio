@@ -160,6 +160,17 @@ header nav {
   margin-right: 20px;
 }
 
+.award-item {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.award-item img {
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .skill-text {
   max-width: 600px;
 }
@@ -497,7 +508,7 @@ details {
   width: 300px; /* 表示サイズを調整 */
   height: auto; /* 高さは画像比率に基づく */
   opacity: 0; /* 初期状態は非表示 */
-  left: -110%; /* メイン画像の右側に表示 */
+  left: -103.75%; /* メイン画像の右側に表示 */
   width: 150px; /* 必要に応じて調整 */
   opacity: 0; /* 初期状態では非表示 */
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
