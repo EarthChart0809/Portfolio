@@ -1,0 +1,241 @@
+#opening {
+      /* background-image : url(./image/梅の花.jpg);
+      background-size: cover; */
+      background : #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #000000;
+      font-size: 2.0rem;
+      font-family: "ten-mincho", sans-serif;
+    }
+
+    #opening .bg-image-left,
+    #opening .bg-image-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 550px;
+      height: auto;
+      opacity: 1;
+      z-index: 1;
+      pointer-events: none;
+      animation: fadeInImage 2s, floatImage 4s infinite alternate;
+    }
+
+    #opening .bg-image-left {
+      left: 0;
+    }
+
+    #opening .bg-image-right {
+      right: 0;
+    }
+  
+    #opening #title {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+
+    #opening .ume-flower-frame {
+      position: absolute;
+      width: 285.5px;
+      height: 285.5px;
+      border-radius: 50%;
+      border: 25px solid #000000;
+      box-sizing: border-box;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1.5s;
+    }
+
+    #opening .ume-flower {
+      position: absolute;
+      left: 20px; top: 20px;
+      width: 200px;
+      height: 200px;
+    }
+
+    #opening .petal {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: #000000;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #ccc;
+      opacity: 0;
+      animation: petalAppear 1s forwards;
+    }
+
+    #opening .center-pentagon {
+      position: absolute;
+      left: 70px; top: 75px;
+      width: 60px; height: 60px;
+      background: #000000;
+      clip-path: polygon(
+        50% 20%,
+        90% 48%,
+        74% 92%,
+        26% 92%,
+        10% 48%
+      );
+      box-shadow: 0 0 8px #bbb;
+      opacity: 0;
+      z-index: 10;
+      animation: petalAppear 1s forwards;
+      animation-delay: 1.2s;
+    }
+
+    #opening .center-circle {
+      position: absolute;
+      left: 87px; top: 87px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 1.75px solid #fff;
+      box-sizing: border-box;
+      background: transparent;
+      z-index: 20;
+      opacity: 0;
+      animation: petalAppear 1s forwards;
+      animation-delay: 1.4s;
+    }
+  
+    #opening .bounce {
+      display: inline-block;
+      opacity: 0; /* 最初は透明 */
+      animation: bounce 1s ease forwards;
+      animation-iteration-count: 1; /* 明示的に1回 */
+    }
+
+    #opening line {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 20;
+      animation: drawLine 0.8s forwards;
+      animation-delay: 2.25s; /* 線の表示タイミング調整（必要なら変更） */
+    }
+
+    /* アニメーションはグローバルでOK */
+    @keyframes fadeInImage {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* @keyframes floatImage {
+      from { transform: translateY(-50%) scale(1); }
+      to   { transform: translateY(-60%) scale(1.03); }
+    } */
+
+    @keyframes drawLine {
+      to { stroke-dashoffset: 0; }
+    }
+
+    @keyframes petalAppear {
+      from { opacity: 0; transform: rotate(180deg) scale(0.5);}
+      to { opacity: 1; transform: rotate(180deg) scale(1.30);}
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      30% {
+        transform: translateY(-40px); /* 高さを大きめに */
+        opacity: 1;
+      }
+      60% {
+        transform: translateY(10px);
+      }
+      80% {
+        transform: translateY(-5px);
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* タブレット対応（768px以下） */
+@media (max-width: 768px) {
+  #opening .bg-image-left,
+  #opening .bg-image-right {
+    width: 300px;
+    opacity: 0.7;
+  }
+  #opening .ume-flower-frame {
+    width: 180px;
+    height: 180px;
+    border-width: 12px;
+  }
+  #opening .ume-flower {
+    left: 10px; top: 10px;
+    width: 140px;
+    height: 140px;
+  }
+  #opening .center-pentagon {
+    left: 40px; top: 45px;
+    width: 40px; height: 40px;
+  }
+  #opening .center-circle {
+    left: 57px; top: 57px;
+    width: 16px; height: 16px;
+    border-width: 1px;
+  }
+  #opening .center-lines {
+    left: 57px !important; top: 57px !important;
+    width: 16px !important; height: 16px !important;
+  }
+  #opening #title {
+    font-size: 1.2rem;
+    bottom: 5px;
+  }
+}
+
+/* スマホ対応（480px以下） */
+@media (max-width: 480px) {
+  #opening .bg-image-left,
+  #opening .bg-image-right {
+    width: 120px;
+    opacity: 0.5;
+  }
+  #opening .ume-flower-frame {
+    width: 110px;
+    height: 110px;
+    border-width: 7px;
+  }
+  #opening .ume-flower {
+    left: 5px; top: 5px;
+    width: 80px;
+    height: 80px;
+  }
+  #opening .center-pentagon {
+    left: 25px; top: 28px;
+    width: 22px; height: 22px;
+  }
+  #opening .center-circle {
+    left: 34px; top: 34px;
+    width: 8px; height: 8px;
+    border-width: 0.7px;
+  }
+  #opening .center-lines {
+    left: 34px !important; top: 34px !important;
+    width: 8px !important; height: 8px !important;
+  }
+  #opening #title {
+    font-size: 0.8rem;
+    bottom: 2px;
+  }
+}

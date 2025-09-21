@@ -30,6 +30,26 @@
       font-size: 2.0rem;
       font-family: "ten-mincho", sans-serif;
     }
+
+    .bg-image-left, .bg-image-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 550px; /* お好みで調整 */
+      height: auto;
+      opacity: 1; /* 透過で背景らしく */
+      z-index: 1;
+      pointer-events: none;
+      animation: fadeInImage 2s, floatImage 4s infinite alternate;
+    }
+
+    .bg-image-left {
+      left: 0;
+    }
+
+    .bg-image-right {
+      right: 0;
+    }
   
     #title {
       position: absolute;
@@ -110,12 +130,26 @@
       animation: bounce 1s ease forwards;
       animation-iteration-count: 1; /* 明示的に1回 */
     }
+
     line {
       stroke-dasharray: 20;
       stroke-dashoffset: 20;
       animation: drawLine 0.8s forwards;
       animation-delay: 2.25s; /* 線の表示タイミング調整（必要なら変更） */
     }
+
+    /* 画像のフェードイン */
+    @keyframes fadeInImage {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* 画像がふわふわ上下に動く
+    @keyframes floatImage {
+      from { transform: translateY(-50%) scale(1); }
+      to   { transform: translateY(-60%) scale(1.03); }
+    } */
+
     @keyframes drawLine {
       to { stroke-dashoffset: 0; }
     }
@@ -154,6 +188,8 @@
 </head>
 
 <body>
+  <img src="./image/suibokuga_left.png" alt="左背景" class="bg-image-left">
+  <img src="./image/suibokuga_right.png" alt="右背景" class="bg-image-right">
   <div class="ume-flower-frame">
     <div class="ume-flower" id="umeFlower">
       <div class="center-pentagon"></div>
@@ -172,7 +208,7 @@
     const linesGroup = document.getElementById('lines-group');
     for(let i=0; i<10; i++){
       // 正十角形の頂点角度
-      const angle = (2 * Math.PI / 10) * i - Math.PI/2;
+      const angle = (2 * Math.PI / 10) * i - Math.PI/2.5;
       // 円周上の頂点座標
       const x1 = circleCx + radius * Math.cos(angle);
       const y1 = circleCy + radius * Math.sin(angle);
