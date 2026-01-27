@@ -1,5 +1,7 @@
 #opening {
-      /* background-image : url(./image/梅の花.jpg);
+  position: relative; /* 追加：内部絶対配置の基準 */
+  overflow: hidden;   /* はみ出し防止 */
+  /* background-image : url(./image/梅の花.jpg);
       background-size: cover; */
       background : #fff;
       display: flex;
@@ -168,74 +170,120 @@
       }
     }
 
-    /* タブレット対応（768px以下） */
+    /* タブレット対応（768px以下） - 改善（中央固定・比率指定） */
 @media (max-width: 768px) {
   #opening .bg-image-left,
   #opening .bg-image-right {
-    width: 300px;
+    width: clamp(120px, 22vw, 300px);
     opacity: 0.7;
   }
+
   #opening .ume-flower-frame {
-    width: 180px;
-    height: 180px;
-    border-width: 12px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(180px, 40vw, 280px);
+    height: clamp(180px, 40vw, 280px);
+    border-width: clamp(8px, 2.5vw, 20px);
+    box-sizing: border-box;
+    z-index: 5;
   }
+
+  /* 花（描画はJSで行われるため位置は必ず中央に寄せる） */
   #opening .ume-flower {
-    left: 10px; top: 10px;
-    width: 140px;
-    height: 140px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(160px, 34vw, 200px); /* JSの既定(200px)を目安に可変 */
+    height: clamp(160px, 34vw, 200px);
+    transform: translate(-50%, -50%);
   }
-  #opening .center-pentagon {
-    left: 40px; top: 45px;
-    width: 40px; height: 40px;
-  }
-  #opening .center-circle {
-    left: 57px; top: 57px;
-    width: 16px; height: 16px;
-    border-width: 1px;
-  }
+
+  /* 中心五角形・円・線は中央基準に */
+  #opening .center-pentagon,
+  #opening .center-circle,
   #opening .center-lines {
-    left: 57px !important; top: 57px !important;
-    width: 16px !important; height: 16px !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
   }
+
+  #opening .center-pentagon {
+    width: clamp(28px, 6.5vw, 60px);
+    height: clamp(28px, 6.5vw, 60px);
+  }
+
+  #opening .center-circle {
+    width: clamp(12px, 3.2vw, 25px);
+    height: clamp(12px, 3.2vw, 25px);
+    border-width: clamp(0.8px, 0.25vw, 1.75px);
+  }
+
+  #opening .petal {
+    width: clamp(28px, 7.5vw, 60px);
+    height: clamp(28px, 7.5vw, 60px);
+  }
+
   #opening #title {
-    font-size: 1.2rem;
-    bottom: 5px;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    bottom: 6px;
   }
 }
 
-/* スマホ対応（480px以下） */
+/* スマホ対応（480px以下） - 改善（中央固定・小画面最適化） */
 @media (max-width: 480px) {
   #opening .bg-image-left,
   #opening .bg-image-right {
-    width: 120px;
+    width: clamp(80px, 30vw, 140px);
     opacity: 0.5;
   }
+
   #opening .ume-flower-frame {
-    width: 110px;
-    height: 110px;
-    border-width: 7px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(140px, 48vw, 220px);
+    height: clamp(140px, 48vw, 220px);
+    border-width: clamp(6px, 2.2vw, 16px);
+    box-sizing: border-box;
+    z-index: 5;
   }
+
   #opening .ume-flower {
-    left: 5px; top: 5px;
-    width: 80px;
-    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(120px, 42vw, 180px);
+    height: clamp(120px, 42vw, 180px);
+    transform: translate(-50%, -50%);
   }
+
   #opening .center-pentagon {
-    left: 25px; top: 28px;
-    width: 22px; height: 22px;
+    width: clamp(22px, 5.5vw, 50px);
+    height: clamp(22px, 5.5vw, 50px);
   }
+
   #opening .center-circle {
-    left: 34px; top: 34px;
-    width: 8px; height: 8px;
+    width: clamp(10px, 2.5vw, 20px);
+    height: clamp(10px, 2.5vw, 20px);
     border-width: 0.7px;
   }
-  #opening .center-lines {
-    left: 34px !important; top: 34px !important;
-    width: 8px !important; height: 8px !important;
+
+  #opening .petal {
+    width: clamp(18px, 10vw, 48px);
+    height: clamp(18px, 10vw, 48px);
   }
+
+  #opening .center-pentagon,
+  #opening .center-circle,
+  #opening .center-lines {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
   #opening #title {
-    font-size: 0.8rem;
-    bottom: 2px;
+    font-size: 0.9rem;
+    bottom: 4px;
   }
 }
