@@ -29,7 +29,7 @@ body {
 }
 
 .upheader {
-  background-image: url("./image/白い梅.jpeg");
+  background-image: url("./image/white_ume.jpeg");
   background-position: center;
   background-size: cover; /* 画像を全体にフィット */
   height: 500px; /* 高さを指定 */
@@ -133,7 +133,7 @@ header {
   color: #fdfdfd;
   text-align: center;
   z-index: 1000;
-  /*background-image: url("梅の花.jpg");
+  /*background-image: url("./image/ume.jpg");
   background-size: cover; /* 画像を全体にフィット */
   /*background-position: center; /* 中央に配置 */
 }
@@ -272,6 +272,205 @@ h2 {
 .skill-img3{
   display:flex;
   gap:150px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* 🌸 カード */
+.skill-card {
+  width: 110px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fdfaf6;
+  border: 1px solid #f7c6c7;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* ホバー時（個別） */
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #c9184a;
+  box-shadow: 0 6px 15px rgba(201, 24, 74, 0.15);
+}
+
+/* メイン部分 */
+.skill-main {
+  text-align: center;
+}
+
+.skill-main img {
+  width: 80px;
+  margin-bottom: 5px;
+}
+
+/* 詳細（最初は非表示） */
+.skill-detail {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  color: #333;
+}
+
+/* 🌸 ホバーしたカードだけ開く */
+.skill-card:hover .skill-detail {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+/* 🌸 クリック固定 */
+.skill-card.active .skill-detail {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.skill-tags span::before {
+  content: "❖";
+  margin-right: 4px;
+  font-size: 10px;
+}
+
+.skill-tags span {
+  font-size: 16px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.05);
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #c9184a;
+  margin-bottom: 15px;
+}
+
+.category::before {
+  content: "✿";
+  margin-right: 8px;
+  color: #f7c6c7;
+}
+
+/* 各カテゴリごと */
+.frontend .category::before {
+  color: #ff8fab;
+}
+
+.backend .category::before {
+  color: #adb5bd;
+}
+
+.iot .category::before {
+  color: #52b788;
+}
+
+.design .category::before {
+  color: #b197fc;
+}
+
+.network .category::before {
+  color: #4cc9f0;
+}
+
+.tools .category::before {
+  color: #868e96;
+}
+
+.category::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #c9184a, transparent);
+  margin-left: 10px;
+}
+
+/* 🌸 カテゴリごとの色（ここがポイント） */
+.frontend .category {
+  color: #c9184a;
+}
+.frontend .category::after {
+  background: linear-gradient(to right, #c9184a, transparent);
+}
+
+.backend .category {
+  color: #6c757d;
+}
+.backend .category::after {
+  background: linear-gradient(to right, #6c757d, transparent);
+}
+
+.iot .category {
+  color: #2b9348;
+}
+.iot .category::after {
+  background: linear-gradient(to right, #2b9348, transparent);
+}
+
+.design .category {
+  color: #9d4edd;
+}
+.design .category::after {
+  background: linear-gradient(to right, #9d4edd, transparent);
+}
+
+.network .category {
+  color: #277da1;
+}
+.network .category::after {
+  background: linear-gradient(to right, #277da1, transparent);
+}
+
+.tools .category {
+  color: #495057;
+}
+.tools .category::after {
+  background: linear-gradient(to right, #495057, transparent);
+}
+
+.frontend .skill-card {
+  background: #fff0f3;
+  border: 1px solid #ffc2d1;
+}
+
+.backend .skill-card {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.iot .skill-card {
+  background: #eefaf1;
+  border: 1px solid #b7e4c7;
+}
+
+.design .skill-card {
+  background: #f5f0ff;
+  border: 1px solid #d0bfff;
+}
+
+.network .skill-card {
+  background: #eef6fa;
+  border: 1px solid #a9d6e5;
+}
+
+.tools .skill-card {
+  background: #f5f5f5;
+  border: 1px solid #ced4da;
 }
 
 .stars {
