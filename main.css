@@ -550,6 +550,20 @@ details summary {
   margin-bottom: 7.5px; /* 画像とテキストの間にスペースを追加 */
 }
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0 10px;
+}
+
+.tech-tags span {
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.05);
+}
+
 /* ページインジケーター */
 .page-indicator {
     display: flex;
