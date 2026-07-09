@@ -13,6 +13,63 @@
     width: 45%; /* 画像の幅を調整 */
   }
 
+  #about{
+        padding:60px 20px;
+    }
+
+    .about-card{
+        padding:35px 25px;
+    }
+
+    /* 横並び → 縦並び */
+    .about-header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:25px;
+    }
+
+    .about-header img{
+        width:150px;
+        height:150px;
+    }
+
+    .profile{
+        width:100%;
+    }
+
+    .profile h3{
+        font-size:24px;
+    }
+
+    .profile-table{
+        grid-template-columns:100px 1fr;
+    }
+
+    .about-message{
+        font-size:15px;
+        line-height:1.9;
+    }
+
+    .section-heading h2{
+        font-size:36px;
+        margin-left:0;
+        text-align:center;
+    }
+
+    .brush-line{
+        width:260px;
+        height:14px;
+        margin:0 auto;
+    }
+
+    .stamp{
+        width:50px;
+        height:50px;
+        font-size:24px;
+    }
+
+
   .award-item {
     margin-top: 16px;
     text-align: center;
@@ -110,6 +167,88 @@
   .image-container {
     width: 100%; /* 画像の幅を調整 */
   }
+
+  #about{
+        padding:50px 15px;
+    }
+
+    .about-card{
+        padding:25px 18px;
+        border-left:5px solid #8b5e3c;
+    }
+
+    .about-header img{
+        width:120px;
+        height:120px;
+    }
+
+    .profile h3{
+        font-size:22px;
+        margin-bottom:18px;
+    }
+
+    /* プロフィールを縦並びに変更 */
+    .profile-table{
+
+        grid-template-columns:1fr;
+
+        row-gap:6px;
+
+    }
+
+    .label{
+
+        font-size:14px;
+        color:#8b5e3c;
+        margin-top:10px;
+
+    }
+
+    .value{
+
+        margin-bottom:10px;
+        line-height:1.7;
+
+    }
+
+    .about-message{
+
+        font-size:14px;
+        line-height:1.8;
+
+    }
+
+    .section-heading{
+
+        margin-bottom:40px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:30px;
+        letter-spacing:4px;
+
+    }
+
+    .brush-line{
+
+        width:180px;
+        height:10px;
+
+    }
+
+    .stamp{
+
+        width:42px;
+        height:42px;
+
+        font-size:18px;
+
+        right:18px;
+        bottom:18px;
+
+    }
 
   .award-item {
     margin-top: 12px;
